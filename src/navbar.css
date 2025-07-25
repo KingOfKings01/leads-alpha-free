@@ -1,0 +1,71 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #FFFCF0;
+  font-family: sans-serif;
+}
+
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.logo {
+  height: 40px;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  align-items: center;
+
+  
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.navbar-right {
+  display: flex;        
+  align-items: center;
+  gap: 16px;
+}
+
+.cta-btn {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 4px 5px;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  svg{
+    width: 34px;
+  }
+}
+
+.cta-btn.secondary {
+  background-color: #2563eb;
+}
+
+.become-text {
+  color: #111;
+  font-weight: 500;
+}
