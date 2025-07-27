@@ -1,6 +1,11 @@
 
 export default function Home() {
   return (
-    <center style={{height: "40vh"}}>Home</center>
+    <div className="home" >
+      
+      <section id="s-2">
+
+      </section>
+    </div>
   )
 }

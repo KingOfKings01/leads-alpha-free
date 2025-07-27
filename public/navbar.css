@@ -1,0 +1,151 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #FFFCF0;
+  font-family: sans-serif;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  align-items: center;
+}
+
+
+.nav-links li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cta-btn {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 4px 5px;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cta-btn svg {
+  width: 34px;
+}
+
+
+.become-text {
+  color: #111;
+  font-weight: 500;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.hamburger .bar.open:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger .bar.open:nth-child(2) {
+  opacity: 0;
+}
+.hamburger .bar.open:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Mobile Sidebar */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 80%;
+  max-width: 300px;
+  background: #fff;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1100;
+  overflow-y: auto;
+  padding: 24px 16px;
+}
+
+.mobile-menu.show {
+  transform: translateX(0%);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Dimmed overlay behind menu */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+/* Responsive helpers */
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: flex;
+  }
+
+  .cta-btn{
+    width: fit-content;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

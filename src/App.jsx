@@ -11,12 +11,12 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/login" element={<Login />} />
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="*" element={<>404 Page not found</>} />
         </Route>
+        <Route path="*" element={<>404 Page not found</>} />
       </Routes>
     </Router>
   );

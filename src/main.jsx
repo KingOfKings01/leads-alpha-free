@@ -1,9 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import './mobile.css'
-import "./footer.css"
-import "./navbar.css"
+import '../public/index.css'
+import '../public/mobile.css'
+import "../public/footer.css"
+import "../public/navbar.css"
+import "../public/home.css"
 import App from './App.jsx'
 import { Auth0Provider } from '@auth0/auth0-react';
 

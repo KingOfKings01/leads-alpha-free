@@ -1,3 +1,6 @@
 # Free-project-1
-* step 1
-    Auth
+
+- step 1
+  Auth
+  navbar
+  footer
