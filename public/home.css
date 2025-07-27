@@ -126,7 +126,7 @@
     .hero-description {
       font-size: 0.95rem;
     }
-  }
+
 
   @media (max-width: 480px) {
     .hero-title {
@@ -145,4 +145,3 @@
       height: 28px;
     }
   }
-}
