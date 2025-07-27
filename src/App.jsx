@@ -15,6 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path='/home/:slug' element={<Home />} />
         </Route>
         <Route path="*" element={<>404 Page not found</>} />
       </Routes>

@@ -1,0 +1,148 @@
+.home {
+  background: #FFFCF0;
+
+  #s-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .country-selector {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      flex-wrap: wrap;
+    }
+
+    .label {
+      font-weight: 500;
+    }
+
+    .country-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .country-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      text-decoration: none;
+      border: 1px solid #ccc;
+      color: #111;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .country-btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    .country-btn.active {
+      border: 2px solid #2563eb;
+      background-color: #e6f0ff;
+      color: #000;
+    }
+
+    .flag {
+      font-size: 1.2rem;
+    }
+
+    /*  👇 Add this block for your hero content */
+    .hero-content {
+      text-align: center;
+      padding: 24px 16px;
+      max-width: 900px;
+
+      .hero-title {
+        font-size: 2.2rem;
+        font-weight: 600;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+      }
+
+      .brand-logos {
+        height: 40px;
+        vertical-align: middle;
+      }
+
+      .highlight {
+        color: #2563eb;
+      }
+
+      .hero-subtitle {
+        font-size: 1.8rem;
+        margin-top: 8px;
+        font-weight: 500;
+        color: #222;
+      }
+
+      .hero-description {
+        margin-top: 12px;
+        font-size: 1rem;
+        color: #444;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+/* 👉 Media queries for mobile responsiveness */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 1.6rem;
+      flex-direction: column;
+      gap: 4px;
+    }
+.country-selector {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .country-buttons {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .country-btn {
+      justify-content: center;
+    }
+  }
+    .brand-logos {
+      height: 32px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+    }
+
+    .hero-description {
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 1.3rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .hero-description {
+      font-size: 0.9rem;
+    }
+
+    .brand-logos {
+      height: 28px;
+    }
+  }
+}
