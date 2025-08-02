@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
 .home {
-  background: #FFFCF0;
+  background: #fffcf0;
 
   #s-1 {
     display: flex;
@@ -12,6 +14,7 @@
       gap: 16px;
       padding: 16px;
       flex-wrap: wrap;
+      margin-top: 20px;
     }
 
     .label {
@@ -47,6 +50,10 @@
       color: #000;
     }
 
+    .country-logo{
+      width: 25px;
+    }
+
     .flag {
       font-size: 1.2rem;
     }
@@ -58,23 +65,22 @@
       max-width: 900px;
 
       .hero-title {
-        font-size: 2.2rem;
-        font-weight: 600;
+        font-size: 3.87rem;
+        font-weight: 500;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 8px;
         text-align: center;
-      }
 
-      .brand-logos {
-        height: 40px;
-        vertical-align: middle;
-      }
+        .brand-logos {
+          height: 60px;
+        }
 
-      .highlight {
-        color: #2563eb;
+        .highlight {
+          color: #2563eb;
+        }
       }
 
       .hero-subtitle {
@@ -90,18 +96,108 @@
         color: #444;
         line-height: 1.6;
       }
+
+      .trust-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 30px 0;
+      }
+
+      .get-started-btn {
+        padding: 10px 7px;
+        border-radius: 50px;
+        background: #1e60db;
+        color: white;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        transition: background 0.3s ease;
+      }
+
+      .get-started-btn:hover {
+        background: #1549aa;
+      }
+
+      /* Inner circular arrow */
+      .get-started-btn svg {
+        width: 25px;
+        height: 25px;
+      }
+
+      .client-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .client-logos {
+        display: flex;
+        gap: -8;
+      }
+
+      .client-logos img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        object-fit: cover;
+        background: #ffffff01;
+        box-shadow: 0px 0px 0px 4px #efeeea;
+        margin-left: -15px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .client-logos img:first-child {
+        margin-left: 0;
+      }
+
+      .trusted-text {
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .trust-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .client-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .trusted-text {
+        font-size: 13px;
+      }
+
+      .get-started-btn {
+        justify-content: space-between;
+        padding: 0 20px;
+      }
     }
   }
 }
 
 /* 👉 Media queries for mobile responsiveness */
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  #s-1 {
     .hero-title {
       font-size: 1.6rem;
       flex-direction: column;
       gap: 4px;
     }
-.country-selector {
+    .country-selector {
       flex-direction: column;
       align-items: stretch;
     }
@@ -114,21 +210,24 @@
     .country-btn {
       justify-content: center;
     }
+
+    
   }
-    .brand-logos {
-      height: 32px;
-    }
+  .brand-logos {
+    height: 32px;
+  }
 
-    .hero-subtitle {
-      font-size: 1.3rem;
-    }
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
 
-    .hero-description {
-      font-size: 0.95rem;
-    }
+  .hero-description {
+    font-size: 0.95rem;
+  }
+}
 
-
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
+  #s-1 {
     .hero-title {
       font-size: 1.3rem;
     }
@@ -145,3 +244,4 @@
       height: 28px;
     }
   }
+}
