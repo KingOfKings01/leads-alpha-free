@@ -119,9 +119,28 @@ export default function Home() {
 
         <section id="s-3">
           <h5 className="title">Editing that grows brand audiences</h5>
-              <Testimonial />
-      
+          <Testimonial />
         </section>
+
+        <section id="s-4">
+          <div className="box-1">
+            <div className="small">
+              <hr />
+              <span>Why Choose Us</span>
+            </div>
+            <h2>
+              What We Can <span>Do <br />
+              For You</span>
+            </h2>
+          </div>
+          <div className="box-2">
+            <p>
+              Stand out in the fast-paced world of short-form content. We create high-energy,
+              engaging edits that keep viewers hooked and help you grow your audience.
+            </p>
+          </div>
+        </section>
+
 
       </div>
 
