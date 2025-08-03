@@ -1,12 +1,54 @@
-import CountrySelector from "../components/CountrySelector";
+import CountrySelector from "../components/Home/CountrySelector";
 import BrandLogos from "../assets/brands.svg";
 import logo1 from "../assets/logo1.jpg";
 import logo2 from "../assets/logo2.jpg";
 import logo3 from "../assets/logo3.jpg";
 import logo4 from "../assets/logo4.jpg";
+import { useEffect, useRef, useState } from "react";
+import { fetchReels } from "../apis/reels";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import Testimonial from "../components/Home/Testimonial";
 
 
 export default function Home() {
+  const videoRefs = useRef([]);
+  const [reels, setReels] = useState([]);
+  const [playingStates, setPlayingStates] = useState([]);
+
+  // eslint-disable-next-line no-unused-vars
+  const togglePlay = (index) => {
+    const video = videoRefs.current[index];
+    const newPlayingStates = [...playingStates];
+
+    if (video.paused) {
+      video.play();
+      newPlayingStates[index] = true;
+    } else {
+      video.pause();
+      newPlayingStates[index] = false;
+    }
+
+    setPlayingStates(newPlayingStates);
+  };
+
+  useEffect(() => {
+    const loadReels = async () => {
+      try {
+        const data = await fetchReels();
+        setReels(data);
+        setPlayingStates(Array(data.length).fill(true));
+      } catch (error) {
+        console.error("Error loading reels:", error.message);
+      }
+    };
+
+    loadReels();
+  }, []);
+
   return (
     <>
       <div className="home">
@@ -32,9 +74,8 @@ export default function Home() {
                 Get Started
                 <svg viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="0.279785" width="40" height="40" rx="20" fill="#4C86F3" />
-                  <path d="M16.1573 23.1248L24.4068 14.8752M24.4068 14.8752H16.1573M24.4068 14.8752V23.1248" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M16.1573 23.1248L24.4068 14.8752M24.4068 14.8752H16.1573M24.4068 14.8752V23.1248" stroke="white" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-
               </button>
 
               <div className="client-info">
@@ -57,11 +98,71 @@ export default function Home() {
         </section>
 
 
-        <div id="s-2">
-        </div>
+        <section id="s-2">
+          <div className="video-marquee-wrapper">
+            <div className="video-card">
+              {reels?.length > 0 && reels.map((element) => (
+                <>
+                  <video
+                    src={element.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  />
+
+                </>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="s-3">
+          <h5 className="title">Editing that grows brand audiences</h5>
+              <Testimonial />
+      
+        </section>
+
       </div>
 
 
     </>
   );
 }
+
+
+
+{/* <div className="carousel-container">
+
+            {reels.map((reel, index) => (
+
+              <div className="reel-card">
+                <video
+                  ref={(el) => (videoRefs.current[index] = el)}
+                  src={reel.video}
+                  className="reel-video"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+                <div className="gradient-overlay" />
+                <div className="reel-info">
+                  <p className="name">{reel.name}</p>
+                  <p className="location">
+                    <img src={reel.flag} alt="flag" />
+                    {reel.location}
+                  </p>
+                </div>
+                <button
+                  className="play-pause-btn"
+                  onClick={() => togglePlay(index)}
+                >
+                  {playingStates[index] ? "❚❚" : "▶"}
+                </button>
+              </div>
+
+            ))}
+
+          </div>
+         */}

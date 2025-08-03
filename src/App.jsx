@@ -3,7 +3,6 @@ import SignIn from './pages/SignIn';
 import Login from './pages/Login'
 
 import Home from './pages/Home';
-import Navbar from './components/Navbar';
 import Layout from './components/Layout/Layout';
 
 
