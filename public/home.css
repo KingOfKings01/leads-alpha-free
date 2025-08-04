@@ -403,8 +403,9 @@
   #s-5 {
     padding: 60px 10vw;
     background: #fff;
-    
-    .services-grid-part-1, .services-grid-part-2{
+
+    .services-grid-part-1,
+    .services-grid-part-2 {
       display: grid;
       gap: 20px;
       max-width: 1200px;
@@ -416,21 +417,18 @@
     }
     .services-grid-part-1 {
       grid-template-columns: 60% 40%;
-      
     }
     .services-grid-part-2 {
       grid-template-columns: 40% 60%;
     }
 
     .service-card {
-
-      background: linear-gradient(180deg, #E5EEFF 0%, #F3F7FF 100%);
-
+      background: linear-gradient(180deg, #e5eeff 0%, #f3f7ff 100%);
+      margin-bottom: 20px;
       padding: 30px;
       border-radius: 20px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease;
-
 
       &:hover {
         transform: translateY(-4px);
@@ -438,13 +436,13 @@
 
       .service-icons {
         display: flex;
-        gap: 10px;
+        gap: -15px;
         margin-bottom: 20px;
         justify-content: end;
-      
+
         .icon-circle {
-          width: 20px;
-          height: 20px;
+          width: 25px;
+          height: 25px;
           background: #1e60db;
           color: #fff;
           display: flex;
@@ -452,10 +450,13 @@
           align-items: center;
           border-radius: 50%;
           font-size: 18px;
+
+          img {
+            width: 30px;
+            height: 30px;
+          }
         }
       }
-
-      
 
       .service-text {
         h3 {
