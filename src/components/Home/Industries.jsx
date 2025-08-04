@@ -1,14 +1,14 @@
 import { NavLink } from "react-router-dom";
 import icon1 from "../../assets/section-6/svg_1.svg";
-import icon2 from "../../assets/section-6/svg_2.png";
-import icon3 from "../../assets/section-6/svg_3.png";
-import icon4 from "../../assets/section-6/svg_4.png";
-import icon5 from "../../assets/section-6/svg_5.png";
-import icon6 from "../../assets/section-6/svg_6.png";
-import icon7 from "../../assets/section-6/svg_7.png";
-import icon8 from "../../assets/section-6/svg_8.png";
-import icon9 from "../../assets/section-6/svg_9.png";
-import icon10 from "../../assets/section-6/svg_10.png";
+import icon2 from "../../assets/section-6/svg_2.svg";
+import icon3 from "../../assets/section-6/svg_3.svg";
+import icon4 from "../../assets/section-6/svg_4.svg";
+import icon5 from "../../assets/section-6/svg_5.svg";
+import icon6 from "../../assets/section-6/svg_6.svg";
+import icon7 from "../../assets/section-6/svg_7.svg";
+import icon8 from "../../assets/section-6/svg_8.svg";
+import icon9 from "../../assets/section-6/svg_9.svg";
+import icon10 from "../../assets/section-6/svg_10.svg";
 
 const industries = [
   { icon: icon1, title: "Cosmetics & Beauty", slug: "cosmetics-n-beauty" },
