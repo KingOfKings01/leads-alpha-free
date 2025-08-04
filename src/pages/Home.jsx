@@ -13,6 +13,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Testimonial from "../components/Home/Testimonial";
 import ServicesGrid from "../components/Home/ServicesGrid";
+import Industries from "../components/Home/Industries";
 
 
 export default function Home() {
@@ -131,7 +132,7 @@ export default function Home() {
             </div>
             <h2>
               What We Can <span>Do <br />
-              For You</span>
+                For You</span>
             </h2>
           </div>
           <div className="box-2">
@@ -147,46 +148,15 @@ export default function Home() {
           <ServicesGrid />
         </section>
 
+        <section id="6">
+          <h1>
+            UGC Videos For All <span className="mark">Industries</span>
+          </h1>
+          <Industries />
+        </section>
       </div>
 
 
     </>
   );
 }
-
-
-
-{/* <div className="carousel-container">
-
-            {reels.map((reel, index) => (
-
-              <div className="reel-card">
-                <video
-                  ref={(el) => (videoRefs.current[index] = el)}
-                  src={reel.video}
-                  className="reel-video"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                />
-                <div className="gradient-overlay" />
-                <div className="reel-info">
-                  <p className="name">{reel.name}</p>
-                  <p className="location">
-                    <img src={reel.flag} alt="flag" />
-                    {reel.location}
-                  </p>
-                </div>
-                <button
-                  className="play-pause-btn"
-                  onClick={() => togglePlay(index)}
-                >
-                  {playingStates[index] ? "❚❚" : "▶"}
-                </button>
-              </div>
-
-            ))}
-
-          </div>
-         */}

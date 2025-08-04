@@ -2,6 +2,9 @@
 
 .home {
   background: #fffcf0;
+  .mark{
+    color: #1E60DB;
+  }
 }
 
 #s-1 {

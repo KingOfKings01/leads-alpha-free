@@ -14,7 +14,7 @@ import video9 from "../assets/videos/video9.mp4";
 import ukIcon from "../assets/uk.svg";
 import zaIcon from "../assets/za.svg";
 import zmIcon from "../assets/zm.svg";
-import ZwIcon from "../assets/Zim.svg";
+import ZwIcon from "../assets/zim.svg";
 
 const mockReels = [
   { name: "Sophie Turner", flag: ukIcon, location: "London, UK", video: video1 },
