@@ -35,7 +35,9 @@ export default function Industries() {
           }
         >
           <img src={icon} alt={title} />
-          {title}
+          <p>
+            {title}
+          </p>
         </NavLink>
       ))}
     </div>

@@ -2,8 +2,8 @@
 
 .home {
   background: #fffcf0;
-  .mark{
-    color: #1E60DB;
+  .mark {
+    color: #1e60db;
   }
 }
 
@@ -477,5 +477,42 @@
         }
       }
     }
+  }
+}
+
+#s-6 {
+  padding: 10vh 10vw;
+  background: #fffcf0;
+  h1 {
+    text-align: center;
+    font-weight: 6 00;
+    font-size: xx-large;
+  }
+
+  .industries {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    color: #333;
+    text-decoration: none;
+    background-color: transparent;
+    transition: background-color 0.3s;
+  }
+  
+  .option.active {
+    background-color: #1d64e7;
+    color: white;
+  }
+  
+  p {
+    font-size: 12px;
   }
 }

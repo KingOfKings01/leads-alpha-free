@@ -148,7 +148,7 @@ export default function Home() {
           <ServicesGrid />
         </section>
 
-        <section id="6">
+        <section id="s-6">
           <h1>
             UGC Videos For All <span className="mark">Industries</span>
           </h1>
