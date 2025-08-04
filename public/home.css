@@ -328,20 +328,19 @@
   }
 }
 
-.home{
-
+.home {
   #s-4 {
     display: flex;
     flex-wrap: wrap;
     padding: 4vh 5vw;
     background: #fff;
-  
+
     .box-1,
     .box-2 {
       width: 50%;
       padding: 1rem;
     }
-  
+
     .box-1 {
       display: flex;
       gap: 20px;
@@ -352,24 +351,24 @@
         gap: 10px;
         font-size: 12px;
         color: #555;
-        
+
         hr {
           width: 30px;
           border: none;
           border-top: 1px solid #ccc;
         }
       }
-      
+
       h2 {
         font-size: 38px;
         font-weight: 500;
-        
+
         span {
           color: #1e60db;
         }
       }
     }
-    
+
     .box-2 {
       align-self: start;
       font-size: 14px;
@@ -379,7 +378,7 @@
       align-items: center;
     }
   }
-  
+
   @media (max-width: 768px) {
     #s-4 {
       flex-direction: column;
@@ -388,13 +387,90 @@
         width: 100%;
         padding: 1rem 0;
       }
-      
-      .box-1{
+
+      .box-1 {
         flex-direction: column;
       }
-  
+
       .box-2 {
         padding-top: 0;
+      }
+    }
+  }
+}
+
+.home {
+  #s-5 {
+    padding: 60px 10vw;
+    background: #fff;
+    
+    .services-grid-part-1, .services-grid-part-2{
+      display: grid;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+    .services-grid-part-1 {
+      grid-template-columns: 60% 40%;
+      
+    }
+    .services-grid-part-2 {
+      grid-template-columns: 40% 60%;
+    }
+
+    .service-card {
+
+      background: linear-gradient(180deg, #E5EEFF 0%, #F3F7FF 100%);
+
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+
+
+      &:hover {
+        transform: translateY(-4px);
+      }
+
+      .service-icons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        justify-content: end;
+      
+        .icon-circle {
+          width: 20px;
+          height: 20px;
+          background: #1e60db;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          font-size: 18px;
+        }
+      }
+
+      
+
+      .service-text {
+        h3 {
+          font-size: 30px;
+          font-weight: 600;
+          margin-bottom: 10px;
+          color: #333;
+        }
+
+        p {
+          font-size: 14px;
+          font-weight: 300;
+          color: #555;
+          line-height: 1.5;
+        }
       }
     }
   }

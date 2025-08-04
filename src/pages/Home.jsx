@@ -12,6 +12,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Testimonial from "../components/Home/Testimonial";
+import ServicesGrid from "../components/Home/ServicesGrid";
 
 
 export default function Home() {
@@ -141,6 +142,10 @@ export default function Home() {
           </div>
         </section>
 
+
+        <section id="s-5">
+          <ServicesGrid />
+        </section>
 
       </div>
 
