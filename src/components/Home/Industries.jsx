@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import icon1 from "../../assets/section-6/svg_1.svg";
 import icon2 from "../../assets/section-6/svg_2.svg";
 import icon3 from "../../assets/section-6/svg_3.svg";
@@ -24,21 +24,25 @@ const industries = [
 ];
 
 export default function Industries() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const selectedIndustry = searchParams.get("industry");
+
+  const handleSelect = (slug) => {
+    searchParams.set("industry", slug);
+    setSearchParams(searchParams); //? updates the URL without reloading 
+  };
+
   return (
     <div className="industries">
       {industries.map(({ icon, title, slug }) => (
-        <NavLink
+        <button
           key={slug}
-          to={`/industry/${slug}`}
-          className={({ isActive }) =>
-            `option ${isActive ? "active" : ""}`
-          }
+          onClick={() => handleSelect(slug)}
+          className={`option ${selectedIndustry === slug ? "active" : ""}`}
         >
           <img src={icon} alt={title} />
-          <p>
-            {title}
-          </p>
-        </NavLink>
+          <p>{title}</p>
+        </button>
       ))}
     </div>
   );

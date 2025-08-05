@@ -1,9 +1,9 @@
-import { Link, useParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
-import ukIcon from "../../assets/uk.svg"
-import zaIcon from "../../assets/za.svg"
-import zmIcon from "../../assets/zm.svg"
-import zwIcon from "../../assets/zim.svg"
+import ukIcon from "../../assets/uk.svg";
+import zaIcon from "../../assets/za.svg";
+import zmIcon from "../../assets/zm.svg";
+import zwIcon from "../../assets/zim.svg";
 
 const countries = [
   { name: "United Kingdom", slug: "uk", flag: ukIcon },
@@ -13,22 +13,29 @@ const countries = [
 ];
 
 export default function CountrySelector() {
-  const { slug } = useParams(); // extracts slug from /home/:slug
+  const [searchParams, setSearchParams] = useSearchParams();
+  const selectedCountry = searchParams.get("country");
+
+  const handleSelect = (slug) => {
+    searchParams.set("country", slug);
+    setSearchParams(searchParams);
+  };
 
   return (
     <div className="country-selector">
       <span className="label">I'm based in:</span>
       <div className="country-buttons">
         {countries.map((country) => (
-          <Link
+          <button
             key={country.slug}
-            to={`/home/${country.slug}`}
-            className={`country-btn ${slug === country.slug ? "active" : ""}`}
+            onClick={() => handleSelect(country.slug)}
+            className={`country-btn ${
+              selectedCountry === country.slug ? "active" : ""
+            }`}
           >
             <img src={country.flag} alt={country.slug} className="country-logo" />
-           
             {country.name}
-          </Link>
+          </button>
         ))}
       </div>
     </div>
