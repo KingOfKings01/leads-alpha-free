@@ -28,8 +28,9 @@ export default function Industries() {
   const selectedIndustry = searchParams.get("industry");
 
   const handleSelect = (slug) => {
+    if (slug === selectedIndustry) return;
     searchParams.set("industry", slug);
-    setSearchParams(searchParams); //? updates the URL without reloading 
+    setSearchParams(searchParams);
   };
 
   return (

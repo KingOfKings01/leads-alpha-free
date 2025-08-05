@@ -14,6 +14,7 @@ import "swiper/css/pagination";
 import Testimonial from "../components/Home/Testimonial";
 import ServicesGrid from "../components/Home/ServicesGrid";
 import Industries from "../components/Home/Industries";
+import VideoCarousel from "../components/Home/VideoCarousel";
 
 
 export default function Home() {
@@ -153,6 +154,7 @@ export default function Home() {
             UGC Videos For All <span className="mark">Industries</span>
           </h1>
           <Industries />
+          <VideoCarousel />
         </section>
       </div>
 

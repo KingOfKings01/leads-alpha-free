@@ -11,6 +11,9 @@ const iconMap = {
   editing: <img src={play_icon} alt="play_icon" />,
 
   chat: <img src={chat_icon} alt="chat_icon" />,
+  
+  blank: <span />,
+
 };
 
 const services_part1 = [
@@ -39,7 +42,7 @@ const services_part1 = [
     title: "Ship Your Product",
     description:
       "You can courier your product to the creator of your choice for them to create a more interactive product experience with your product to your target audience.",
-    icons: [],
+    icons: ["blank"],
   },
 ];
 
