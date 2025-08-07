@@ -14,6 +14,7 @@ import ServicesGrid from "../components/Home/ServicesGrid";
 import Industries from "../components/Home/Industries";
 import VideoCarousel from "../components/Home/VideoCarousel";
 import Connect from "../components/Home/Connect";
+import Pricing from "../components/Home/Pricing";
 
 
 export default function Home() {
@@ -152,6 +153,11 @@ export default function Home() {
 
         <section id="s-8">
           <Connect />
+        </section>
+
+        <section id="s-9">
+          <h1>Pricing</h1>
+          <Pricing />
         </section>
 
       </div>

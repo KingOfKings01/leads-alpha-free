@@ -223,6 +223,64 @@ svg {
   color: #041c4a;
 }
 
+
+/* Common Swiper Buttons */
+
+.carousel {
+  position: relative;
+  padding: 40px 20px;
+  
+  box-sizing: border-box;
+  margin: 0 5vw;
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+  opacity: 0.8;
+}
+
+/* Disabled buttons - controlled by Swiper adding .swiper-button-disabled */
+.swiper-button-prev-custom.swiper-button-disabled,
+.swiper-button-next-custom.swiper-button-disabled {
+  opacity: 0.2 !important;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Left Button Specific */
+.swiper-button-prev-custom {
+  left: -20px;
+}
+
+/* Right Button Specific */
+.swiper-button-next-custom {
+  right: -20px;
+}
+
+.swiper-button-prev-custom svg,
+.swiper-button-next-custom svg {
+  width: 30px;
+  height: 30px;
+  transition: filter 0.3s ease;
+}
+
+/* On hover – darken the button fill */
+.swiper-button-prev-custom:hover svg path:first-child,
+.swiper-button-next-custom:hover svg path:first-child {
+  fill-opacity: 0.8;
+}
+
 /* ! Blue button with cros arrow */
 .action-btn {
   width: fit-content;
@@ -249,8 +307,54 @@ svg {
 }
 
 /* Title with line */
+.title-with-line-left,
+.title-with-line-right {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #444a46;
+  font-weight: 500;
+  gap: 12px;
+  width: 100px;
+}
+
+.title-with-line-left::after,
+.title-with-line-right::before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #444a46;
+}
 
 
+/* ! Blue button with cros arrow */
+.action-btn {
+  width: fit-content;
+  padding: 6px 10px;
+  padding-left: 12px;
+  border-radius: 50px;
+  background: #1e60db;
+  color: white;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s ease;
+  &:hover {
+    background: #1549aa;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+/* Title with line */
 .title-with-line-left, .title-with-line-right {
   display: flex;
   align-items: center;

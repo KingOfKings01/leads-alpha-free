@@ -5,6 +5,9 @@ import "../public/footer.css"
 import "../public/navbar.css"
 import "../public/home.css"
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(

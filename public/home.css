@@ -1,4 +1,3 @@
-
 .home {
   background: #fffcf0;
   .mark {
@@ -565,57 +564,6 @@
     width: 100%;
     box-sizing: border-box;
   }
-  /* Common Swiper Buttons */
-  .swiper-button-prev-custom,
-  .swiper-button-next-custom {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-    opacity: 1;
-  }
-
-  .swiper-button-prev-custom:hover,
-  .swiper-button-next-custom:hover {
-    opacity: 0.8;
-  }
-
-  /* Disabled buttons - controlled by Swiper adding .swiper-button-disabled */
-  .swiper-button-prev-custom.swiper-button-disabled,
-  .swiper-button-next-custom.swiper-button-disabled {
-    opacity: 0.2 !important;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-
-  /* Left Button Specific */
-  .swiper-button-prev-custom {
-    left: -20px;
-  }
-
-  /* Right Button Specific */
-  .swiper-button-next-custom {
-    right: -20px;
-  }
-
-  .swiper-button-prev-custom svg,
-  .swiper-button-next-custom svg {
-    width: 30px;
-    height: 30px;
-    transition: filter 0.3s ease;
-  }
-
-  .swiper-button-next-custom svg {
-    transform: rotate(180deg);
-  }
-
-  /* On hover – darken the button fill */
-  .swiper-button-prev-custom:hover svg path:first-child,
-  .swiper-button-next-custom:hover svg path:first-child {
-    fill-opacity: 0.8;
-  }
 
   /* Video Card */
   .video-card {
@@ -751,7 +699,6 @@
     justify-content: center;
   }
 
-
   .results-grid {
     display: flex;
     gap: 30px;
@@ -832,7 +779,7 @@
 
   .main-result-card {
     margin: 30px 20vw 0;
-    
+
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -878,5 +825,84 @@
         }
       }
     }
+  }
+}
+
+#s-9 {
+  background: #fff;
+  h1 {
+    text-align: center;
+  }
+
+  .pricing-card {
+    padding: 20px 10px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+    max-width: 360px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .card-heading {
+    border-radius: 5px;
+    padding: 24px;
+    background: #efeeea;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .pricing-card .label {
+    font-size: 8px;
+    font-weight: 500;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: fit-content;
+    svg {
+      width: 6px;
+      height: 6px;
+    }
+  }
+
+  .pricing-card h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+  }
+
+  .pricing-card .price {
+    font-size: 28px;
+    font-weight: 500;
+    color: #111;
+    margin: 0;
+  }
+  .pricing-card .bonus {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pricing-card ul li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #333;
+    font-size: 14px;
   }
 }
