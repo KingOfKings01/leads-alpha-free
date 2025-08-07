@@ -7,11 +7,11 @@ const iconMap = {
   tiktok: <img src={tiktok} alt="tik-tok" />,
   instagram: <img src={instagram} alt="instagram" />,
   link: <img src={video_icon} alt="video_icon" />,
-  
+
   editing: <img src={play_icon} alt="play_icon" />,
 
   chat: <img src={chat_icon} alt="chat_icon" />,
-  
+
   blank: <span />,
 
 };
@@ -31,7 +31,7 @@ const services_part1 = [
   }
 ]
 
-  const services_part2 = [
+const services_part2 = [
   {
     title: "Social Media Content",
     description:
@@ -49,44 +49,44 @@ const services_part1 = [
 const ServicesGrid = () => {
   return (
     <>
-    <div className="services-grid-part-1">
-      {services_part1.map((service, index) => (
-        <div className="service-card" key={index}>
-          {service.icons.length > 0 && (
-            <div className="service-icons">
-              {service.icons.map((icon, i) => (
-                <div className="icon-circle" key={i}>
-                  {iconMap[icon]}
-                </div>
-              ))}
+      <div className="services-grid-part-1">
+        {services_part1.map((service, index) => (
+          <div className="service-card" key={index}>
+            {service.icons.length > 0 && (
+              <div className="service-icons">
+                {service.icons.map((icon, i) => (
+                  <div className="icon-circle" key={i}>
+                    {iconMap[icon]}
+                  </div>
+                ))}
+              </div>
+            )}
+            <div className="service-text">
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
             </div>
-          )}
-          <div className="service-text">
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
           </div>
-        </div>
-      ))}
-    </div>
-    <div className="services-grid-part-2">
-      {services_part2.map((service, index) => (
-        <div className="service-card" key={index}>
-          {service.icons.length > 0 && (
-            <div className="service-icons">
-              {service.icons.map((icon, i) => (
-                <div className="icon-circle" key={i}>
-                  {iconMap[icon]}
-                </div>
-              ))}
+        ))}
+      </div>
+      <div className="services-grid-part-2">
+        {services_part2.map((service, index) => (
+          <div className="service-card" key={index}>
+            {service.icons.length > 0 && (
+              <div className="service-icons">
+                {service.icons.map((icon, i) => (
+                  <div className="icon-circle" key={i}>
+                    {iconMap[icon]}
+                  </div>
+                ))}
+              </div>
+            )}
+            <div className="service-text">
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
             </div>
-          )}
-          <div className="service-text">
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
     </>
   );
 };
