@@ -15,6 +15,7 @@ import Industries from "../components/Home/Industries";
 import VideoCarousel from "../components/Home/VideoCarousel";
 import Connect from "../components/Home/Connect";
 import Pricing from "../components/Home/Pricing";
+import ActionButton from "../components/ActionButton";
 
 
 export default function Home() {
@@ -158,6 +159,20 @@ export default function Home() {
         <section id="s-9">
           <h1>Pricing</h1>
           <Pricing />
+        </section>
+
+        <section id="s-10">
+          <div className="part-1">
+          <h2>Ready to 10x your <span className="mark">Video<br />
+            Views?</span></h2>
+          <p>Let’s turn your content into scroll-stopping videos that grow your audience and boost your
+            engagement. Book a call and let’s bring your vision to life. </p>
+            <ActionButton label="Get Started"/>
+          </div>
+          <div className="part-2">
+            <div className="left-videos"></div>
+            <div className="right-videos"></div>
+          </div>
         </section>
 
       </div>
