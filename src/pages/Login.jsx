@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import G_icon from "../assets/G_icon";
 import F_icon from "../assets/F_icon";
 import A_icon from "../assets/A_icon";

@@ -6,7 +6,6 @@ import "../public/navbar.css"
 import "../public/home.css"
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 import App from './App.jsx'
 

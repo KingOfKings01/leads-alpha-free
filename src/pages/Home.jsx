@@ -7,8 +7,6 @@ import logo4 from "../assets/logo4.jpg";
 import { useEffect, useState } from "react";
 import { fetchReels } from "../apis/reels";
 
-import "swiper/css";
-import "swiper/css/pagination";
 import Testimonial from "../components/Home/Testimonial";
 import ServicesGrid from "../components/Home/ServicesGrid";
 import Industries from "../components/Home/Industries";
@@ -127,10 +125,10 @@ export default function Home() {
           </div>
         </section>
 
-
         <section id="s-5">
           <ServicesGrid />
         </section>
+
 
         <section id="s-6">
           <h1>
@@ -163,11 +161,11 @@ export default function Home() {
 
         <section id="s-10">
           <div className="part-1">
-          <h2>Ready to 10x your <span className="mark">Video<br />
-            Views?</span></h2>
-          <p>Let’s turn your content into scroll-stopping videos that grow your audience and boost your
-            engagement. Book a call and let’s bring your vision to life. </p>
-            <ActionButton label="Get Started"/>
+            <h2>Ready to 10x your <span className="mark">Video<br />
+              Views?</span></h2>
+            <p>Let’s turn your content into scroll-stopping videos that grow your audience and boost your
+              engagement. Book a call and let’s bring your vision to life. </p>
+            <ActionButton label="Get Started" />
           </div>
           <div className="part-2">
             <div className="left-videos"></div>
@@ -182,9 +180,3 @@ export default function Home() {
   );
 }
 
-
-{/* Button Icon */ }
-{/* <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0.279785" y="1" width="40" height="40" rx="20" fill="#4C86F3" />
-    <path d="M16.1573 24.1248L24.4068 15.8752M24.4068 15.8752H16.1573M24.4068 15.8752V24.1248" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-  </svg> */}
