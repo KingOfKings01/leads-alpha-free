@@ -84,9 +84,10 @@ export default function Home() {
 
         <section id="s-2">
           <div className="video-marquee-wrapper">
-            <div className="video-card">
+            <div className="video-cards">
               {reels?.length > 0 && reels.map((element) => (
-                <>
+
+                <div className="video-card">
                   <video
                     src={element.video}
                     autoPlay
@@ -94,8 +95,13 @@ export default function Home() {
                     loop
                     playsInline
                   />
+                  <div className="video-card-content">
+                  <h4>{element.name}</h4>
+                  <p><img src={element.flag} alt="flag" className="country-logo" /> <span>{element.location}</span></p>
+                  </div>
+                </div>
 
-                </>
+
               ))}
             </div>
           </div>
