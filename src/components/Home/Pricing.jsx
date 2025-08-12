@@ -150,7 +150,7 @@ export default function Pricing() {
                                 <h4>{plan.title}</h4>
                                 <p className="bonus">{plan.bonus}</p>
                                 <p className="price">${plan.price}</p>
-                                <ActionButton label="Add To Wallet" bg={plan?.option == "recommended" ? "#4C86F3" : "#5f91ed"} />
+                                <ActionButton label="Add To Wallet" arrow_bg={plan?.option == "recommended" ? "#4C86F3" : "#5f91ed"} bg="#5f91ed"/>
                             </div>
 
                             <ul className="list-of-options">
@@ -175,7 +175,7 @@ export default function Pricing() {
             <div className="cta">
                 <h2>Still can't decide?</h2>
                 <p>Let's figure out what you need</p>
-                <ActionButton label="Let's talk" bg="#ffffffff" stroke="#4C86F3" />
+                <ActionButton label="Let's talk" arrow_bg="#ffffffff" stroke="#4C86F3" />
             </div>
             }
         </div>

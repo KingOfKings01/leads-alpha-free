@@ -96,8 +96,8 @@ export default function Home() {
                     playsInline
                   />
                   <div className="video-card-content">
-                  <h4>{element.name}</h4>
-                  <p><img src={element.flag} alt="flag" className="country-logo" /> <span>{element.location}</span></p>
+                    <h4>{element.name}</h4>
+                    <p><img src={element.flag} alt="flag" className="country-logo" /> <span>{element.location}</span></p>
                   </div>
                 </div>
 
