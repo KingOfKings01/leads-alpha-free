@@ -54,7 +54,7 @@ export default function Home() {
             </p>
 
             <div className="trust-container">
-              <button className="action-btn">
+              <button className="action-btn"> 
                 Get Started
                 <svg viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="0.279785" width="40" height="40" rx="20" fill="#4C86F3" />
