@@ -21,7 +21,9 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <img src={logo} alt="Leads Alpha Logo" className="logo" />
+        <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="logo-link">
+          <img src={logo} alt="Leads Alpha Logo" className="logo" />
+        </Link>
         <ul className="nav-links desktop-only">
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/pricing">Pricing</Link></li>
@@ -35,7 +37,7 @@ export default function Navbar() {
         <Link to="/get-started" className="cta-btn secondary">Get Started {svg}</Link>
       </div>
 
-{/* //! Hamburger */}
+      {/* //! Hamburger */}
       <div className="hamburger mobile-only" onClick={() => setOpen(!open)}>
         <div className={`bar ${open ? "open" : ""}`} />
         <div className={`bar ${open ? "open" : ""}`} />

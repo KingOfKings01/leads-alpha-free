@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import googleStars from '../assets/google_with_starts.png';
 import logo from '../assets/leads-alpha-logo.png';
 
@@ -47,13 +48,13 @@ const Footer = () => {
         <div className="footer-column">
           <h4>Company</h4>
           <ul>
-            <li>About Us</li>
-            <li>Site Notice</li>
-            <li>Refund Policy</li>
-            <li>Privacy Policy</li>
-            <li>Credit Expiration Policy</li>
-            <li>T&Cs - Creators</li>
-            <li>T&Cs - Brands</li>
+            <li><Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>About Us</Link></li>
+            <li><Link to="/site-notice" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Site Notice</Link></li>
+            <li><Link to="/refund-policy" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Refund Policy</Link></li>
+            <li><Link to="/privacy-policy" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Privacy Policy</Link></li>
+            <li><Link to="/credit-expiration-policy" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Credit Expiration Policy</Link></li>
+            <li><Link to="/terms-creators" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>T&Cs - Creators</Link></li>
+            <li><Link to="/terms-brands" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>T&Cs - Brands</Link></li>
           </ul>
         </div>
 
