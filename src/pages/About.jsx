@@ -16,9 +16,9 @@ export default function About() {
                     className="flex-1 text-center md:text-left"
                 >
                     <h2
-                        className="text-lg md:text-2xl font-medium mb-4"
+                        className="text-lg md:text-[2.3rem] font-medium mb-4"
                     >
-                        About <span className="text-blue-600">Us</span>
+                        About <span className="text-blue-600 font-semibold">Us</span>
                     </h2>
                     <p
                         className="text-gray-600 text-sm leading-relaxed text-justify px-3 md:px-0"
@@ -51,9 +51,9 @@ export default function About() {
                     className="flex-1 text-center md:text-left md:ml-[2rem]"
                 >
                     <h2
-                        className="text-lg md:text-2xl font-medium mb-4"
+                        className="text-lg md:text-[2.3rem] font-medium mb-4"
                     >
-                        Our <span className="text-blue-600">Mission</span>
+                        Our <span className="text-blue-600 font-semibold">Mission</span>
                     </h2>
                     <p
                         className="text-gray-600 text-sm leading-relaxed text-justify px-3 md:px-0"
@@ -79,8 +79,8 @@ export default function About() {
                 <div
                     className="flex-1 text-center md:text-left"
                 >
-                    <h2 className="text-lg md:text-2xl font-medium mb-4">
-                        Our <span className="text-blue-600">Flagship</span>
+                    <h2 className="text-lg md:text-[2.3rem] font-medium mb-4">
+                        Our <span className="text-blue-600 font-semibold">Flagship</span>
                     </h2>
                     <p
                         className="text-gray-600 text-sm leading-relaxed text-justify px-3 md:px-0"
