@@ -29,7 +29,6 @@ export default function Home() {
         console.error("Error loading reels:", error.message);
       }
     };
-
     loadReels();
   }, []);
 

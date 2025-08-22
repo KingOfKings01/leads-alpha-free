@@ -302,25 +302,6 @@ svg {
   }
 }
 
-/* Title with line */
-.title-with-line-left,
-.title-with-line-right {
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  color: #444a46;
-  font-weight: 500;
-  gap: 12px;
-  width: 100px;
-}
-
-.title-with-line-left::after,
-.title-with-line-right::before {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background-color: #444a46;
-}
 
 
 /* ! Blue button with cros arrow */
@@ -347,23 +328,4 @@ svg {
     width: 30px;
     height: 30px;
   }
-}
-
-
-/* Title with line */
-.title-with-line-left, .title-with-line-right {
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  color: #444a46;
-  font-weight: 500;
-  gap: 12px;
-  width: 100px;
-}
-
-.title-with-line-left::after,  .title-with-line-right::before{
-  content: "";
-  flex: 1;
-  height: 1px;
-  background-color: #444a46;
 }

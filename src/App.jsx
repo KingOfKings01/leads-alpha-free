@@ -6,7 +6,6 @@ import Layout from './components/Layout/Layout';
 import "../public/App.css"
 import About from './pages/About';
 
-
 function App() {
   return (
     <Router>
