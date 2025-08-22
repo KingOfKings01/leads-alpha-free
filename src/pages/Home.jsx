@@ -53,9 +53,7 @@ export default function Home() {
             </p>
 
             <div className="trust-container">
-           
               <ActionButton label="Get Started"/>
-              
               <div className="client-info">
                 <div className="client-logos">
                   <img src={logo1} alt="logo1" />
