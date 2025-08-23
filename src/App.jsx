@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Layout from './components/Layout/Layout';
 import "../public/App.css"
 import About from './pages/About';
+import Services from './pages/Services';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/services' element={<Services />} />
         </Route>
         <Route path="*" element={<>404 Page not found</>} />
       </Routes>

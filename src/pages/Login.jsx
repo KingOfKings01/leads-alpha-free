@@ -9,7 +9,6 @@ import leads_alpha_logo from "../assets/leads-alpha-logo.png";
 import { handleRedirectCallback, loginWithSocial, logout} from "../services/auth0";
 
 export default function LogIn() {
-    
   const [user, setUser] = useState(null);
 
   // Handle Auth0 redirect
