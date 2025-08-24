@@ -11,12 +11,14 @@ import Connect from "../components/Home/Connect";
 import Pricing from "../components/Home/Pricing";
 import ActionButton from "../components/ActionButton";
 import HeroSection from "../components/Home/UI/HeroSection";
-import VideoMarqueeSection from "../components/Home/UI/VideoMarqueeSection";
+import MarqueeSection from "../components/Home/UI/MarqueeSection";
+import { logoList } from "../assets/testimonial/group_logo";
 
 
 export default function Home() {
 
   const [reels, setReels] = useState([]);
+  const [logos, setLogos] = useState(logoList);
 
   useEffect(() => {
     const loadReels = async () => {
@@ -39,12 +41,10 @@ export default function Home() {
           </section>
 
         <section id="s-2">
-   
-          <VideoMarqueeSection reels={reels} direction="left" />
+          <MarqueeSection details={reels} direction="left" />
         </section>
 
         <section id="s-3">
-          <h5 className="title">Editing that grows brand audiences</h5>
           <Testimonial />
         </section>
 
@@ -70,7 +70,6 @@ export default function Home() {
         <section id="s-5">
           <ServicesGrid />
         </section>
-
 
         <section id="s-6">
           <h1>

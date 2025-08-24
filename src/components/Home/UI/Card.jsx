@@ -1,19 +1,23 @@
-export default function VideoCard({ video = null, image = null, name, flag, location }) {
+export default function Card({ url, isImage, name, flag, location }) {
   return (
     <div className="relative flex flex-col gap-2">
       {/* Video */}
       {
-        video ? (
+        isImage ? (
+            <img
+          src={url}
+          alt={name || "card-media"}
+          className="h-[18vh] w-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+        />
+        ) : (
           <video
-            src={video}
+            src={url}
             autoPlay
             muted
             loop
             playsInline
             className="rounded-md h-[77vh] flex-shrink-0"
           />
-        ) : (
-          <img src={image} alt="" />
         )
       }
 

@@ -17,15 +17,15 @@ import zmIcon from "../assets/zm.svg";
 import ZwIcon from "../assets/zim.svg";
 
 const mockReels = [
-  { name: "Sophie Turner", flag: ukIcon, location: "London, UK", video: video1 },
-  { name: "Raj Laxmi", flag: zaIcon, location: "Mumbai, India", video: video2 },
-  { name: "Emma Watson", flag: zmIcon, location: "Paris, France", video: video3 },
-  { name: "Zara Khan", flag: ZwIcon, location: "Cape Town, South Africa", video: video4 },
-  { name: "Priya Singh", flag: ukIcon, location: "Delhi, India", video: video5 },
-  { name: "Ava Patel", flag: zaIcon, location: "Johannesburg, South Africa", video: video6 },
-  { name: "Lily James", flag: zmIcon, location: "Lusaka, Zambia", video: video7 },
-  { name: "Sara Ali", flag: ZwIcon, location: "Harare, Zimbabwe", video: video8 },
-  { name: "Maya Kapoor", flag: ukIcon, location: "London, UK", video: video9 },
+  { name: "Sophie Turner", flag: ukIcon, location: "London, UK", url: video1 },
+  { name: "Raj Laxmi", flag: zaIcon, location: "Mumbai, India", url: video2 },
+  { name: "Emma Watson", flag: zmIcon, location: "Paris, France", url: video3 },
+  { name: "Zara Khan", flag: ZwIcon, location: "Cape Town, South Africa", url: video4 },
+  { name: "Priya Singh", flag: ukIcon, location: "Delhi, India", url: video5 },
+  { name: "Ava Patel", flag: zaIcon, location: "Johannesburg, South Africa", url: video6 },
+  { name: "Lily James", flag: zmIcon, location: "Lusaka, Zambia", url: video7 },
+  { name: "Sara Ali", flag: ZwIcon, location: "Harare, Zimbabwe", url: video8 },
+  { name: "Maya Kapoor", flag: ukIcon, location: "London, UK", url: video9 },
 ];
 
 export const fetchReels = async () => {
