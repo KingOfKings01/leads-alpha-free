@@ -28,6 +28,7 @@ export default function Home() {
 
         const urls = data.map(item => item.url);
         setVideos(urls);
+        console.log(urls)
       } catch (error) {
         console.error("Error loading reels:", error.message);
       }
