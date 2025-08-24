@@ -27,32 +27,61 @@ export default function Industries() {
     setSearchParams(searchParams);
   };
 
+  const option = "cursor-pointer flex items-center px-[16px] py-[8px] rounded-[24px] gap-[8px] transition-colors duration-300 hover:bg-[#0055ff14]"
+
   return (
-    <div className="industries">
-    <div className="industries_1">
-      {industries_1.map(({ icon: Icon, title, slug }) => (
-        <button
-        key={slug}
-          onClick={() => handleSelect(slug)}
-          className={`option ${selectedIndustry === slug ? "active" : ""}`}
-        >
-          <Icon />
-          <p>{title}</p>
-        </button>
-      ))}
-    </div>
-    <div className="industries_2">
-      {industries_2.map(({ icon: Icon, title, slug }) => (
-        <button
-        key={slug}
-          onClick={() => handleSelect(slug)}
-          className={`option ${selectedIndustry === slug ? "active" : ""}`}
-        >
-          <Icon />
-          <p>{title}</p>
-        </button>
-      ))}
-    </div>
+    <div className=" flex flex-col items-center m-0 p-0 gap-0 md:mx-[10vw] md:pt-[20px] md:gap-[20px]">
+      <div className="flex flex-col md:flex-row whitespace-nowrap">
+        {industries_1.map(({ icon: Icon, title, slug }) => (
+          <button
+            key={slug}
+            onClick={() => handleSelect(slug)}
+            className={`${option} ${selectedIndustry === slug
+                ? "bg-gradient-to-b from-[#0c52d4] to-[#6094f4] text-white"
+                : "text-black"
+              }`}
+          >
+            <Icon
+              width="15px"
+              height="15px"
+              fill={`${selectedIndustry === slug ? "#FFFFFF" : "#AEAEAE"}`}
+            />
+            <p
+              className={`text-[18px] md:text-[12px] ${selectedIndustry === slug ? "text-white" : "text-black"
+                }`}
+            >
+              {title}
+            </p>
+          </button>
+
+        ))}
       </div>
+
+      <div className="flex flex-col md:flex-row whitespace-nowrap">
+        {industries_2.map(({ icon: Icon, title, slug }) => (
+          <button
+            key={slug}
+            onClick={() => handleSelect(slug)}
+            className={`${option} ${selectedIndustry === slug
+              ? "bg-gradient-to-b from-[#0c52d4] to-[#6094f4] text-white"
+              : "text-black"
+              }`}
+          >
+            <Icon
+              width="15px"
+              height="15px"
+              fill={`${selectedIndustry === slug ? "#FFFFFF" : "#AEAEAE"}`}
+            />
+            <p
+              className={`text-[18px] md:text-[12px] ${selectedIndustry === slug ? "text-white" : "text-black"
+                }`}
+            >
+              {title}
+            </p>
+          </button>
+
+        ))}
+      </div>
+    </div>
   );
 }

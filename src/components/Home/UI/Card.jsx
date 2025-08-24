@@ -1,13 +1,13 @@
-export default function Card({ url, isImage, name, flag, location }) {
+export default function Card({ url, isImage, name, flag, location, cardHeight, cardWidth }) {
   return (
-    <div className="relative flex flex-col gap-2">
+    <div className="relative flex flex-col gap-2" style={{ height: cardHeight, width: cardWidth }}>
       {/* Video */}
       {
         isImage ? (
             <img
           src={url}
           alt={name || "card-media"}
-          className="h-[18vh] w-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+          className="h-[18vh] w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         ) : (
           <video
@@ -16,7 +16,7 @@ export default function Card({ url, isImage, name, flag, location }) {
             muted
             loop
             playsInline
-            className="rounded-md h-[77vh] flex-shrink-0"
+            className="h-[77vh] flex-shrink-0"
           />
         )
       }

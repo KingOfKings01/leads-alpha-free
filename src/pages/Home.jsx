@@ -17,12 +17,17 @@ import ServicesSection from "../components/Home/ServicesSection";
 export default function Home() {
 
   const [reels, setReels] = useState([]);
+  const [videos, setVideos] = useState([]);
 
   useEffect(() => {
+
     const loadReels = async () => {
       try {
         const data = await fetchReels();
         setReels(data);
+
+        const urls = data.map(item => item.url);
+        setVideos(urls);
       } catch (error) {
         console.error("Error loading reels:", error.message);
       }
@@ -34,7 +39,7 @@ export default function Home() {
     <>
       <div className="home">
 
-      {/* s-1 Hero Section */}
+        {/* s-1 Hero Section */}
         <section>
           <HeroSection />
         </section>
@@ -55,29 +60,39 @@ export default function Home() {
         </section>
 
         {/* s-5 Services Grid Section */}
-        <section id="s-5">
+        <section>
           <ServicesGrid />
         </section>
 
+        {/* s-6 Industries Section */}
         <section id="s-6">
-          <h1>
-            UGC Videos For All <span className="mark">Industries</span>
-          </h1>
-          <Industries />
-          <VideoCarousel />
+          <div className="px-[10vw] py-[10vh] bg-[#fffcf0]">
+            <h1 className="text-center font-semibold text-3xl mb-10 md:mb-5 md:text-4xl">
+              UGC Videos For All <span className="mark">Industries</span>
+            </h1>
+            <Industries />
+            <VideoCarousel />
+          </div>
         </section>
 
-        <div id="s-7">
-          <div className="head">
-            <h1>Connect With <span className="mark">1000+<br />
-              UGC Creators
-            </span>
+        {/* s-7 Connect Section */}
+        <section
+          className="px-[5vw] py-[60px] bg-white"
+        >
+          <div className="flex justify-between items-center gap-10 flex-wrap">
+            <h1 className="text-[40px] font-medium leading-[1.2] text-[#111] max-md:text-[28px]">
+              Connect With{" "}
+              <span className="text-[#1e60db]">
+                1000+ <br /> UGC Creators
+              </span>
             </h1>
-            <p>Access Creators who speak 2 or more languages to advertise your product and services in a
-              language of your choice. From *English to Nyanja, to IsiZulu and more!</p>
+            <p className="flex-1 text-[11px] font-light text-[#444] leading-[1.6] max-w-[500px] max-md:text-[13px] max-md:max-w-full">
+              Access Creators who speak 2 or more languages to advertise your product and
+              services in a language of your choice. From *English to Nyanja, to IsiZulu
+              and more!
+            </p>
           </div>
-        </div>
-
+        </section>
 
         <section id="s-8">
           <Connect />
@@ -88,21 +103,45 @@ export default function Home() {
           <Pricing />
         </section>
 
-        <section id="s-10">
-          <div className="part-1">
-            <h2>Ready to 10x your <span className="mark">Video<br />
-              Views?</span></h2>
-            <p>Let’s turn your content into scroll-stopping videos that grow your audience and boost your
-              engagement. Book a call and let’s bring your vision to life. </p>
+        <section
+          className="flex justify-between items-center gap-10 px-[15vw] py-[50px] bg-[#fff8ee] max-md:flex-col max-md:text-center max-md:gap-10 max-md:px-[5vh] max-md:py-[25px]"
+        >
+          {/* Left Side */}
+          <div className="flex-1">
+            <h2 className="text-[30px] leading-[1.2] font-bold text-[#111] mb-5 max-md:text-xl">
+              Ready to 10x your{" "}
+              <span className="text-[#1e60db]">Video<br />Views?</span>
+            </h2>
+            <p className="text-[10px] leading-[1.6] text-[#333] mb-8">
+              Let’s turn your content into scroll-stopping videos that grow your
+              audience and boost your engagement. Book a call and let’s bring your
+              vision to life.
+            </p>
             <ActionButton label="Get Started" />
           </div>
-          <div className="part-2">
-            <div className="left-videos"></div>
-            <div className="right-videos"></div>
+
+          {/* Right Side */}
+          <div className="part-2 w-[45%] gap-4 hidden md:flex">
+            <MarqueeSection
+              details={videos}
+              direction="up"
+              height="70vh"
+              cardHeight="300px"
+              cardWidth="150px"
+              fadeEdges={true}
+            />
+            <MarqueeSection
+              details={videos}
+              direction="down"
+              height="70vh"
+              cardHeight="300px"
+              cardWidth="150px"
+              fadeEdges={true}
+            />
           </div>
         </section>
 
-      </div>
+      </div >
 
 
     </>

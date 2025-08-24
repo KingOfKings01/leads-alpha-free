@@ -6,11 +6,11 @@ import Card from "./Card";
  * @param {String} direction - "left" | "right" | "up" | "down"
  */
 
-export default function  Marquee({ details = [], direction = "left", fadeEdges = false, height, isImage=false }) {
+export default function  Marquee({ details = [], direction = "left", fadeEdges = false, height, width, isImage=false, cardHeight, cardWidth }) {
     const isVertical = direction === "up" || direction === "down";
 
     return (
-        <div className={`w-full overflow-hidden relative h-[${isVertical ? height : "auto"}]`}>
+        <div className={`w-full overflow-hidden relative h-[${isVertical ? height : "auto"}]`} style={{ width }}>
             {/* edge fades */}
             {!isVertical && fadeEdges && (
                 <>
@@ -45,6 +45,8 @@ export default function  Marquee({ details = [], direction = "left", fadeEdges =
                             name={element?.name}
                             flag={element?.flag}
                             location={element?.location}
+                            cardHeight={cardHeight}
+                            cardWidth={cardWidth}
                         />
                     ))}
             </div>
