@@ -12,13 +12,11 @@ import Pricing from "../components/Home/Pricing";
 import ActionButton from "../components/ActionButton";
 import HeroSection from "../components/Home/UI/HeroSection";
 import MarqueeSection from "../components/Home/UI/MarqueeSection";
-import { logoList } from "../assets/testimonial/group_logo";
-
+import ServicesSection from "../components/Home/ServicesSection";
 
 export default function Home() {
 
   const [reels, setReels] = useState([]);
-  const [logos, setLogos] = useState(logoList);
 
   useEffect(() => {
     const loadReels = async () => {
@@ -36,37 +34,27 @@ export default function Home() {
     <>
       <div className="home">
 
-          <section>
-            <HeroSection />
-          </section>
+      {/* s-1 Hero Section */}
+        <section>
+          <HeroSection />
+        </section>
 
-        <section id="s-2">
+        {/* s-2 Marquee Section */}
+        <section>
           <MarqueeSection details={reels} direction="left" />
         </section>
 
-        <section id="s-3">
+        {/* s-3 Testimonial Section */}
+        <section>
           <Testimonial />
         </section>
 
-        <section id="s-4">
-          <div className="box-1">
-            <div className="small">
-              <hr />
-              <span>Why Choose Us</span>
-            </div>
-            <h2>
-              What We Can <span>Do <br />
-                For You</span>
-            </h2>
-          </div>
-          <div className="box-2">
-            <p>
-              Stand out in the fast-paced world of short-form content. We create high-energy,
-              engaging edits that keep viewers hooked and help you grow your audience.
-            </p>
-          </div>
+        {/* s-4 Services Section */}
+        <section>
+          <ServicesSection />
         </section>
 
+        {/* s-5 Services Grid Section */}
         <section id="s-5">
           <ServicesGrid />
         </section>

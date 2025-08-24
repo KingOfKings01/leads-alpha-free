@@ -1,6 +1,6 @@
-export default function TitleWithLine({ text = "text", align = "left" }) {
+export default function TitleWithLine({ text = "text", align = "left", width = "100px" }) {
   const baseClasses =
-    "flex items-center text-[12px] text-[#444a46] font-medium gap-3 w-[100px]";
+    `flex items-center text-[12px] text-[#444a46] font-medium gap-3 w-[${width}]`;
 
   const alignClasses =
     align === "left"
