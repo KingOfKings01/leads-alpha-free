@@ -1,9 +1,5 @@
-import CountrySelector from "../components/Home/CountrySelector";
 import BrandLogos from "../assets/brands.svg";
-import logo1 from "../assets/logo1.jpg";
-import logo2 from "../assets/logo2.jpg";
-import logo3 from "../assets/logo3.jpg";
-import logo4 from "../assets/logo4.jpg";
+
 import { useEffect, useState } from "react";
 import { fetchReels } from "../apis/reels";
 
@@ -14,6 +10,8 @@ import VideoCarousel from "../components/Home/VideoCarousel";
 import Connect from "../components/Home/Connect";
 import Pricing from "../components/Home/Pricing";
 import ActionButton from "../components/ActionButton";
+import HeroSection from "../components/Home/UI/HeroSection";
+import VideoMarqueeSection from "../components/Home/UI/VideoMarqueeSection";
 
 
 export default function Home() {
@@ -35,68 +33,14 @@ export default function Home() {
   return (
     <>
       <div className="home">
-        <section id="s-1">
-          <CountrySelector />
 
-          <div className="hero-content">
-            <h1 className="hero-title">
-              Connecting <span className="highlight">Brands</span>
-              <img src={BrandLogos} alt="Brand Logos" className="brand-logos" />
-              <span className="highlight">To UGC</span>
-            </h1>
-
-            <h1 className="hero-title">That Skyrockets Your Ads</h1>
-
-            <p className="hero-description">
-              Produce high-quality, authentic, and personalised user-generated content videos for your business<br />
-              crafted by genuine creators from around the globe
-            </p>
-
-            <div className="trust-container">
-              <ActionButton label="Get Started"/>
-              <div className="client-info">
-                <div className="client-logos">
-                  <img src={logo1} alt="logo1" />
-                  <img src={logo2} alt="logo2" />
-                  <img src={logo3} alt="logo3" />
-                  <img src={logo4} alt="logo4" />
-                </div>
-
-                <div className="trusted-text">
-                  <span> ★★★★★ </span>
-                  <br />
-                  Trusted by 40+ clients
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </section>
-
+          <section>
+            <HeroSection />
+          </section>
 
         <section id="s-2">
-          <div className="video-marquee-wrapper">
-            <div className="video-cards">
-              {reels?.length > 0 && reels.map((element) => (
-
-                <div className="video-card">
-                  <video
-                    src={element.video}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                  />
-                  <div className="video-card-content">
-                    <h4>{element.name}</h4>
-                    <p><img src={element.flag} alt="flag" className="country-logo" /> <span>{element.location}</span></p>
-                  </div>
-                </div>
-
-
-              ))}
-            </div>
-          </div>
+   
+          <VideoMarqueeSection reels={reels} direction="left" />
         </section>
 
         <section id="s-3">

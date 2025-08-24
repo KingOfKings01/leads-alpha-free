@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 🔹 Custom marquee animations */
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollDown {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+.animate-scrollLeft {
+  animation: scrollLeft 20s linear infinite;
+}
+
+.animate-scrollRight {
+  animation: scrollRight 20s linear infinite;
+}
+
+.animate-scrollUp {
+  animation: scrollUp 20s linear infinite;
+}
+
+.animate-scrollDown {
+  animation: scrollDown 20s linear infinite;
+}
