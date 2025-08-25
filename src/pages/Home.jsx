@@ -9,15 +9,14 @@ import Industries from "../components/Home/Industries";
 import VideoCarousel from "../components/Home/VideoCarousel";
 import Connect from "../components/Home/Connect";
 import Pricing from "../components/Home/Pricing";
-import ActionButton from "../components/ActionButton";
 import HeroSection from "../components/Home/UI/HeroSection";
 import MarqueeSection from "../components/Home/UI/MarqueeSection";
 import ServicesSection from "../components/Home/ServicesSection";
+import CTASection from "../components/Home/CTASection";
 
 export default function Home() {
 
   const [reels, setReels] = useState([]);
-  const [videos, setVideos] = useState([]);
 
   useEffect(() => {
 
@@ -25,9 +24,7 @@ export default function Home() {
       try {
         const data = await fetchReels();
         setReels(data);
-
         const urls = data.map(item => item.url);
-        setVideos(urls);
         console.log(urls)
       } catch (error) {
         console.error("Error loading reels:", error.message);
@@ -104,42 +101,9 @@ export default function Home() {
           <Pricing />
         </section>
 
-        <section
-          className="flex justify-between items-center gap-10 px-[15vw] py-[50px] bg-[#fff8ee] max-md:flex-col max-md:text-center max-md:gap-10 max-md:px-[5vh] max-md:py-[25px]"
-        >
-          {/* Left Side */}
-          <div className="flex-1">
-            <h2 className="text-[30px] leading-[1.2] font-bold text-[#111] mb-5 max-md:text-xl">
-              Ready to 10x your{" "}
-              <span className="text-[#1e60db]">Video<br />Views?</span>
-            </h2>
-            <p className="text-[10px] leading-[1.6] text-[#333] mb-8">
-              Let’s turn your content into scroll-stopping videos that grow your
-              audience and boost your engagement. Book a call and let’s bring your
-              vision to life.
-            </p>
-            <ActionButton label="Get Started" />
-          </div>
-
-          {/* Right Side */}
-          <div className="part-2 w-[45%] gap-4 hidden md:flex">
-            <MarqueeSection
-              details={videos}
-              direction="up"
-              height="70vh"
-              cardHeight="300px"
-              cardWidth="150px"
-              fadeEdges={true}
-            />
-            <MarqueeSection
-              details={videos}
-              direction="down"
-              height="70vh"
-              cardHeight="300px"
-              cardWidth="150px"
-              fadeEdges={true}
-            />
-          </div>
+        {/* s-10 Final CTA Section */}
+        <section>
+          <CTASection />
         </section>
 
       </div >
