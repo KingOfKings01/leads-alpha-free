@@ -27,7 +27,15 @@ const footerColumns = [
     groups: [
       {
         title: "Socials",
-        items: ["Instagram", "TikTok", "Facebook", "LinkedIn", "X", "Snapchat", "Masterclass"],
+        items: [
+          { label: "Instagram", href: "https://www.instagram.com/leadsalpha.ugc?igsh=Yzkwd3U3NmF6aXAw&utm_source=qr" },
+          { label: "TikTok", href: "https://www.tiktok.com/@leadsalpha.ugc?_t=ZM-8yeQiO5LGx6&_r=1" },
+          { label: "Facebook", href: "https://www.facebook.com/share/1FCLLAgsdv/?mibextid=wwXIfr" },
+          { label: "LinkedIn", href: "https://www.linkedin.com/company/leadsalpha" },
+          { label: "X", href: "https://x.com/leadsalpha_io?s=11&t=7v7jTjfx6LicKrQMe_SzSA" },
+          { label: "Snapchat", href: "https://t.snapchat.com/DN1BcUH5" },
+          { label: "Masterclass", href: "/masterclass" },
+        ],
       },
     ],
   },
@@ -40,6 +48,7 @@ const footerColumns = [
           { label: "Site Notice", to: "/site-notice" },
           { label: "Refund Policy", to: "/refund-policy" },
           { label: "Privacy Policy", to: "/privacy-policy" },
+          { label: "Careers", to: "/careers" },
           { label: "Credit Expiration Policy", to: "/credit-expiration-policy" },
           { label: "T&Cs - Creators", to: "/terms-creators" },
           { label: "T&Cs - Brands", to: "/terms-brands" },
@@ -68,25 +77,45 @@ const Footer = () => {
               <div key={secIdx}>
                 <h4 className="text-[#6A6A70] text-xs mb-3">{section.title}</h4>
                 <ul className="space-y-2 text-xs">
-                  {section.items.map((item, i) =>
-                    typeof item === "string" ? (
-                      <li key={i} className="hover:underline cursor-pointer">
-                        {item}
-                      </li>
-                    ) : (
-                      <li key={i}>
-                        <Link
-                          to={item.to}
-                          onClick={() =>
-                            window.scrollTo({ top: 0, behavior: "smooth" })
-                          }
-                          className="hover:underline"
-                        >
-                          {item.label}
-                        </Link>
-                      </li>
-                    )
-                  )}
+                  {section.items.map((item, i) => {
+                    if (typeof item === "string") {
+                      return (
+                        <li key={i} className="hover:underline cursor-pointer">
+                          {item}
+                        </li>
+                      );
+                    }
+                    if (item.to) {
+                      return (
+                        <li key={i}>
+                          <Link
+                            to={item.to}
+                            onClick={() =>
+                              window.scrollTo({ top: 0, behavior: "smooth" })
+                            }
+                            className="hover:underline"
+                          >
+                            {item.label}
+                          </Link>
+                        </li>
+                      );
+                    }
+                    if (item.href) {
+                      return (
+                        <li key={i}>
+                          <a
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline"
+                          >
+                            {item.label}
+                          </a>
+                        </li>
+                      );
+                    }
+                    return null;
+                  })}
                 </ul>
               </div>
             ))}
