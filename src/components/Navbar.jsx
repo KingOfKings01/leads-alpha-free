@@ -23,7 +23,7 @@ export default function Navbar() {
           <img src={logo} alt="Leads Alpha Logo" className="h-10" />
         </Link>
 
-        <ul className="hidden md:flex list-none gap-6 items-center">
+        <ul className="hidden md:flex! list-none gap-6 items-center">
           <li>
             <Link to="/services" className="text-[#111] font-medium">Services</Link>
           </li>
@@ -38,14 +38,14 @@ export default function Navbar() {
       </div>
 
       {/* Right Section */}
-      <div className="hidden md:flex items-center gap-4">
+      <div className="hidden md:flex! items-center gap-4">
         <span className="text-[#111] font-medium">Become a Creator</span>
         <ActionButton label="Get Started" />
       </div>
 
       {/* Hamburger */}
       <div
-        className="flex md:hidden flex-col gap-1 cursor-pointer"
+        className="flex md:hidden! flex-col gap-1 cursor-pointer"
         onClick={() => setOpen(!open)}
       >
         <div
