@@ -21,7 +21,7 @@ export default function CTASection() {
     }, []);
 
     return (
-        <div className="flex justify-between items-center gap-10 px-[15vw] py-[50px] bg-[#fff8ee] max-md:flex-col max-md:text-center max-md:gap-10 max-md:px-[5vh] max-md:py-[25px]">
+        <div className="flex justify-between items-center gap-10 px-[8vw] py-[50px] bg-[#fff8ee] max-md:flex-col max-md:text-center max-md:gap-10 max-md:px-[5vh] max-md:py-[25px]">
             {/* Left Side */}
             <div className="flex-1">
                 <h2 className="text-[30px] leading-[1.2] font-bold text-[#111] mb-5 max-md:text-xl">

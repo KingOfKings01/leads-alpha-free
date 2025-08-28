@@ -19,7 +19,11 @@ const footerColumns = [
     groups: [
       {
         title: "Resources",
-        items: ["Help", "What is UGC?", "Case Studies", "Blogs", "Affiliate program"],
+        items: [
+          // "Help", 
+          "What is UGC?", "Case Studies", "Blogs", 
+          // "Affiliate program"
+          ],
       },
     ],
   },
@@ -34,7 +38,7 @@ const footerColumns = [
           { label: "LinkedIn", href: "https://www.linkedin.com/company/leadsalpha" },
           { label: "X", href: "https://x.com/leadsalpha_io?s=11&t=7v7jTjfx6LicKrQMe_SzSA" },
           { label: "Snapchat", href: "https://t.snapchat.com/DN1BcUH5" },
-          { label: "Masterclass", href: "/masterclass" },
+          // { label: "Masterclass", href: "/masterclass" },
         ],
       },
     ],
@@ -49,7 +53,7 @@ const footerColumns = [
           { label: "Refund Policy", to: "/refund-policy" },
           { label: "Privacy Policy", to: "/privacy-policy" },
           { label: "Careers", to: "/careers" },
-          { label: "Credit Expiration Policy", to: "/credit-expiration-policy" },
+          // { label: "Credit Expiration Policy", to: "/credit-expiration-policy" },
           { label: "T&Cs - Creators", to: "/terms-creators" },
           { label: "T&Cs - Brands", to: "/terms-brands" },
         ],

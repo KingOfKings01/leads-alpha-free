@@ -3,15 +3,15 @@ import BrandLogos from "../assets/brands.svg";
 import { useEffect, useState } from "react";
 import { fetchReels } from "../apis/reels";
 
+import HeroSection from "../components/Home/UI/HeroSection";
+import MarqueeSection from "../components/Home/UI/MarqueeSection";
 import Testimonial from "../components/Home/Testimonial";
+import ServicesSection from "../components/Home/ServicesSection";
 import ServicesGrid from "../components/Home/ServicesGrid";
 import Industries from "../components/Home/Industries";
 import VideoCarousel from "../components/Home/VideoCarousel";
 import Connect from "../components/Home/Connect";
 import Pricing from "../components/Home/Pricing";
-import HeroSection from "../components/Home/UI/HeroSection";
-import MarqueeSection from "../components/Home/UI/MarqueeSection";
-import ServicesSection from "../components/Home/ServicesSection";
 import CTASection from "../components/Home/CTASection";
 
 export default function Home() {
@@ -97,7 +97,7 @@ export default function Home() {
         </section>
 
         <section id="s-9">
-          <h1>Pricing</h1>
+          <h1 className="text-center font-semibold text-3xl mb-10 md:mb-5 md:text-4xl">Pricing</h1>
           <Pricing />
         </section>
 

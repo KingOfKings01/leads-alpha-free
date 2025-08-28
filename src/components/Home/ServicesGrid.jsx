@@ -47,7 +47,7 @@ const ServicesGrid = () => {
   return (
     <section id="s-5" className="px-[10vw] pb-[60px] pt-[10px] bg-white">
       {/* Part 1 */}
-      <div className="flex max-w-[1200px] mx-auto gap-5 flex-col md:flex-row md:gap-5 mb-6">
+      <div className="flex max-w-[1200px] mx-auto gap-5 flex-col md:flex-row! md:gap-5 mb-6">
         {services_part1.map((service, index) => (
           <div
             key={index}
@@ -72,7 +72,7 @@ const ServicesGrid = () => {
       </div>
 
       {/* Part 2 */}
-      <div className="flex max-w-[1200px] mx-auto gap-5 flex-col md:flex-row md:gap-5">
+      <div className="flex max-w-[1200px] mx-auto gap-5 flex-col md:flex-row! md:gap-5">
         {services_part2.map((service, index) => (
           <div
             key={index}

@@ -22,10 +22,10 @@ export default function CountrySelector() {
     };
 
     return (
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 p-4 mt-5">
+        <div className="flex flex-col  justify-center items-center gap-4 p-4 mt-5">
             <span className="font-medium">I'm based in:</span>
 
-            <div className="flex flex-col md:flex-row flex-wrap gap-2">
+            <div className="flex flex-col md:flex-row! flex-wrap gap-2">
                 {countries.map((country) => (
                     <button
                         key={country.slug}
