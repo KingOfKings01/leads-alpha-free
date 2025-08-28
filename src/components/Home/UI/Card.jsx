@@ -2,12 +2,13 @@ export default function Card({ url, isImage, name, flag, location, cardHeight, c
   return (
     <div className="relative flex flex-col gap-2" style={{ height: cardHeight, width: cardWidth }}>
       {/* Video */}
+      {console.log(isImage ? url: "no")}
       {
         isImage ? (
             <img
           src={url}
-          alt={name || "card-media"}
-          className="h-[18vh] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          alt={url || "card-media"}
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         ) : (
           <video

@@ -2,7 +2,7 @@ import Marquee from "./Marquee";
 
 export default function MarqueeSection({ details = [], isImage = false, direction = "left", height = "", width="", cardHeight="", cardWidth="" }) {
   return (
-    <section className="pb-[10vh]">
+    <section className="">
       <Marquee
         details={details}
         isImage={isImage}

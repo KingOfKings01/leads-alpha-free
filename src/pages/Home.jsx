@@ -43,7 +43,7 @@ export default function Home() {
         </section>
 
         {/* s-2 Marquee Section */}
-        <section>
+        <section className="pb-[50px]">
           <MarqueeSection details={reels} direction="left" />
         </section>
 
@@ -75,7 +75,7 @@ export default function Home() {
 
         {/* s-7 Connect Section */}
         <section
-          className="px-[5vw] py-[60px] bg-white"
+          className="px-[7vw] py-[60px] bg-white"
         >
           <div className="flex justify-between items-center gap-10 flex-wrap">
             <h1 className="text-[40px] font-medium leading-[1.2] text-[#111] max-md:text-[28px]">
