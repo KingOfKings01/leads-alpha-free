@@ -25,6 +25,7 @@ const CheckIcon = ({ width = 35, height = 35 }) => (
   </svg>
 );
 
+
 export default function DetailCard({
   title,
   description,
@@ -45,7 +46,7 @@ export default function DetailCard({
     >
       {/* Text Content */}
       <div className="flex-1 space-y-3">
-        <h1 className="text-2xl lg:text-[2rem] font-semibold leading-snug text-gray-900">
+        <h1 className="text-2xl lg:text-4xl font-semibold leading-snug text-gray-900">
           {title}
         </h1>
 
@@ -54,7 +55,7 @@ export default function DetailCard({
         </p>
 
         <ul className="text-gray-700 text-[12px] ">
-          {points.map((point, i) => (
+          {points?.length > 0 && points.map((point, i) => (
             <li key={i} className="flex items-center gap-3">
               <CheckIcon />
               <span>{point}</span>

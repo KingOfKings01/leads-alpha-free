@@ -10,12 +10,12 @@ export default function CTASection() {
     const contentReverse = [{ url: img5 }, { url: img4 }, { url: img3 }, { url: img2 }, { url: img1 }]
 
     return (
-        <div className="flex justify-between items-center gap-10 px-[8vw] py-[50px] bg-[#fff8ee] max-md:flex-col! max-md:text-center! max-md:gap-10! max-md:px-[5vh]! max-md:py-[25px]!">
+        <div className="flex justify-between items-center gap-10 px-[18vw] py-[50px] bg-[#fff8ee] max-md:flex-col! max-md:text-center! max-md:gap-10! max-md:px-[5vh]! max-md:py-[25px]!">
             {/* Left Side */}
             <div className="flex-1">
-                <h2 className="text-[30px] leading-[1.2] font-bold text-[#111] mb-5 max-md:text-xl!">
+                <h2 className="text-[25px] leading-[1.2] font-bold text-[#111] mb-5 max-md:text-xl!">
                     Ready to 10x your{" "}
-                    <span className="text-[#1e60db]">Video<br />Views?</span>
+                    <span className="text-[#1e60db]">Video Views?</span>
                 </h2>
                 <p className="text-[10px] leading-[1.6] text-[#333] mb-8">
                     Let’s turn your content into scroll-stopping videos that grow your
@@ -28,7 +28,7 @@ export default function CTASection() {
             {/* Right Side */}
 
 
-            <div className="part-2 relative w-[45%] gap-4 hidden md:flex!">
+            <div className="part-2 relative  gap-4 hidden md:flex!">
 
                 {/* Top & Bottom fog */}
                 <div className="pointer-events-none absolute inset-x-0 top-0 w-[66.5%] h-12 bg-gradient-to-b from-white to-transparent z-20" />
@@ -49,7 +49,6 @@ export default function CTASection() {
                     cardWidth="150px"
                 />
             </div>
-
         </div>
     )
 }
