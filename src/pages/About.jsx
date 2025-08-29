@@ -9,19 +9,19 @@ export default function About() {
         <div className='about'>
             {/* About Section (image first on mobile) */}
             <div
-                className="max-w-[90vw] my-[10vh] gap-[6vh] mx-auto flex flex-col-reverse items-center md:flex-row"
+                className="max-w-[90vw] my-[10vh] gap-[6vh] mx-auto flex flex-col-reverse items-center md:flex-row!"
             >
                 {/* Text Section */}
                 <div
-                    className="flex-1 text-center md:text-left"
+                    className="flex-1 text-center md:text-left!"
                 >
                     <h2
-                        className="text-lg md:text-[2.3rem] font-medium mb-4"
+                        className="text-lg md:text-[2.3rem]! font-medium mb-4"
                     >
                         About <span className="text-blue-600 font-semibold">Us</span>
                     </h2>
                     <p
-                        className="text-gray-600 text-sm leading-relaxed text-justify px-3 md:px-0"
+                        className="text-gray-600 text-sm leading-relaxed text-justify px-3 md:px-0!"
                     >
                         Leads Alpha is a vibrant and growing team of creative professionals, all about supporting creators
                         and businesses across the world with genuine and impactful User-Generated Content. We work together
@@ -33,30 +33,30 @@ export default function About() {
 
                 {/* Image Section */}
                 <div
-                    className={`bg-[url(${img1})] bg-no-repeat h-[50vw] md:h-[28vw] mb-[1rem] w-full md:w-[49%] bg-cover bg-center rounded-[20px]`}
+                    className={`bg-[url(${img1})] bg-no-repeat h-[50vw] md:h-[28vw]! mb-[1rem] w-full md:w-[49%]! bg-cover bg-center rounded-[20px]`}
                 />
             </div>
 
             {/* Mission Section (keep order: image first on desktop) */}
             <div
-                className="max-w-[90vw] my-[10vh] mx-auto flex flex-col items-center md:flex-row"
+                className="max-w-[90vw] my-[10vh] mx-auto flex flex-col items-center md:flex-row!"
             >
                 {/* Image Section */}
                 <div
-                    className={`bg-[url(${img2})] bg-no-repeat bg-cover bg-position-[25%_85%] md:bg-position-[25%_95%] h-[50vw] md:h-[35vw] w-full md:w-[49%] mb-[2rem] rounded-[20px]`}
+                    className={`bg-[url(${img2})] bg-no-repeat bg-cover bg-position-[25%_85%] md:bg-position-[25%_95%]! h-[50vw] md:h-[35vw]! w-full md:w-[49%]! mb-[2rem] rounded-[20px]`}
                 />
 
                 {/* Text Section */}
                 <div
-                    className="flex-1 text-center md:text-left md:ml-[2rem]"
+                    className="flex-1 text-center md:text-left! md:ml-[2rem]!"
                 >
                     <h2
-                        className="text-lg md:text-[2.3rem] font-medium mb-4"
+                        className="text-lg md:text-[2.3rem]! font-medium mb-4"
                     >
                         Our <span className="text-blue-600 font-semibold">Mission</span>
                     </h2>
                     <p
-                        className="text-gray-600 text-sm leading-relaxed text-justify px-3 md:px-0"
+                        className="text-gray-600 text-sm leading-relaxed text-justify px-3 md:px-0!"
                     >
                         We're excited to support Leads Alpha's growth and to help build strong connections
                         between brands and video creators. Let's keep working together to make great things
@@ -72,18 +72,18 @@ export default function About() {
 
             {/* Flagship Section */}
             <div
-                className="px-[5vw] py-[10vh] gap-[6vh] py-[2rem] bg-[#FFFCF0] mx-auto flex flex-col-reverse items-center md:flex-row"
+                className="px-[5vw] py-[10vh] gap-[6vh] py-[2rem] bg-[#FFFCF0] mx-auto flex flex-col-reverse items-center md:flex-row!"
             >
 
                 {/* Text Section */}
                 <div
-                    className="flex-1 text-center md:text-left"
+                    className="flex-1 text-center md:text-left!"
                 >
-                    <h2 className="text-lg md:text-[2.3rem] font-medium mb-4">
+                    <h2 className="text-lg md:text-[2.3rem]! font-medium mb-4">
                         Our <span className="text-blue-600 font-semibold">Flagship</span>
                     </h2>
                     <p
-                        className="text-gray-600 text-sm leading-relaxed text-justify px-3 md:px-0"
+                        className="text-gray-600 text-sm leading-relaxed text-justify px-3 md:px-0!"
                     >
                         Our flagship product is a friendly and easy-to-use User-Generated Content (UGC) platform that makes
                         connecting brands and creators a breeze! With a super intuitive interface and great accessibility features,
@@ -97,22 +97,22 @@ export default function About() {
                 </div>
 
                 {/* Images Section */}
-                <div className="w-80 md:w-[35vw] flex flex-row gap-[1rem] items-center py-[1rem] relative">
+                <div className="w-80 md:w-[35vw]! flex flex-row gap-[1rem] items-center py-[1rem] relative">
                     <div className="flex flex-col gap-[1rem] w-full z-1">
                         <div
-                            className={`bg-[url(${img3_1})] bg-no-repeat bg-position-[53%_95%] h-[25vh] md:h-[23vw] w-full bg-cover rounded-[20px]`}
+                            className={`bg-[url(${img3_1})] bg-no-repeat bg-position-[53%_95%] h-[25vh] md:h-[23vw]! w-full bg-cover rounded-[20px]`}
                         />
                         <div
-                            className={`bg-[url(${img3_3})] bg-no-repeat h-[20vh] md:h-[17vw] w-full bg-cover rounded-[20px]`}
+                            className={`bg-[url(${img3_3})] bg-no-repeat h-[20vh] md:h-[17vw]! w-full bg-cover rounded-[20px]`}
                         />
                     </div>
                     <div className="flex flex-col gap-[1rem] w-full z-2">
                         <div
-                            className={`bg-[url(${img3_2})] bg-no-repeat bg-position-[45%_95%] h-[20vh] md:h-[20vw] w-[40vw] md:w-full bg-cover rounded-[20px]`}
+                            className={`bg-[url(${img3_2})] bg-no-repeat bg-position-[45%_95%] h-[20vh] md:h-[20vw]! w-[40vw] md:w-full! bg-cover rounded-[20px]`}
                         />
 
                     </div>
-                    <div className='absolute bg-[#FFF4DD] w-[45vw] md:w-[20vw] h-[30vh] md:h-[28vw] rounded-[20px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                    <div className='absolute bg-[#FFF4DD] w-[45vw] md:w-[20vw]! h-[30vh] md:h-[28vw]! rounded-[20px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                     </div>
                 </div>
             </div>
