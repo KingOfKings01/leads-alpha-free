@@ -83,7 +83,7 @@ const footerColumns = [
 const Footer = () => {
   return (
     <footer className="bg-gray-100 text-gray-800 font-sans px-[6vw] py-[7vh]">
-      <div className="flex flex-wrap justify-between gap-2 md:gap-4">
+      <div className="flex flex-wrap justify-between gap-2 md:gap-4!">
         {/* Auto-generated Columns */}
         {footerColumns.map((col, colIdx) => (
           <div key={colIdx} className="flex-1 min-w-[150px] space-y-4">
@@ -130,7 +130,7 @@ const Footer = () => {
         ))}
 
         {/* Brand Section */}
-        <div className="flex-1 min-w-[200px] mt-6 md:mt-0">
+        <div className="flex-1 min-w-[200px] mt-6 md:mt-0!">
           <div className="flex items-center gap-2 mb-3">
             <img src={logo} alt="Leads Alpha" className="w-24 h-auto" />
           </div>
