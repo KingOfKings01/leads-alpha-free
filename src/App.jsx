@@ -7,6 +7,7 @@ import "../public/App.css"
 import About from './pages/About';
 import Services from './pages/Services';
 import FAQCreators from './pages/FAQCreators';
+import FAQBrand from './pages/FAQBrand';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/services' element={<Services />} />
-          <Route path='/faq-creators' element={<FAQCreators />} />
+          <Route path='/faqs-creators' element={<FAQCreators />} />
+          <Route path='/faqs-brands' element={<FAQBrand />} />
         </Route>
         <Route path="*" element={<>404 Page not found</>} />
       </Routes>

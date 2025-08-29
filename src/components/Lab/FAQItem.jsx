@@ -3,8 +3,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AnimatedIcon } from "./AnimatedIcon";
 
-
-
 export default function FAQItem({ question, answer, initialOpen = false }) {
   const [open, setOpen] = useState(initialOpen);
 
@@ -15,7 +13,7 @@ export default function FAQItem({ question, answer, initialOpen = false }) {
         className="flex justify-between items-center cursor-pointer"
         onClick={() => setOpen(!open)}
       >
-        <h3 className="text-sm font-semibold">{question}</h3>
+        <h3 className="text-sm">{question}</h3>
         <AnimatedIcon open={open} size={30} />
       </div>
 

@@ -7,11 +7,20 @@ const footerColumns = [
     groups: [
       {
         title: "Services",
-        items: ["Apps", "Agencies", "eCommerce"],
+        items: [
+          { label: "Apps", to: "/apps" },
+          { label: "Agencies", to: "/agencies" },
+          { label: "eCommerce", to: "/ecommerce" },
+        ],
       },
       {
         title: "By Platform",
-        items: ["TikTok", "Facebook", "Instagram", "Other"],
+        items: [
+          { label: "TikTok", to: "/tiktok" },
+          { label: "Facebook", to: "/facebook" },
+          { label: "Instagram", to: "/instagram" },
+          { label: "Other", to: "/other" },
+        ],
       },
     ],
   },
@@ -20,10 +29,10 @@ const footerColumns = [
       {
         title: "Resources",
         items: [
-          // "Help", 
-          "What is UGC?", "Case Studies", "Blogs", 
-          // "Affiliate program"
-          ],
+          { label: "What is UGC?", to: "/what-is-ugc" },
+          { label: "Case Studies", to: "/case-studies" },
+          { label: "Blogs", to: "/blogs" },
+        ],
       },
     ],
   },
@@ -32,13 +41,12 @@ const footerColumns = [
       {
         title: "Socials",
         items: [
-          { label: "Instagram", href: "https://www.instagram.com/leadsalpha.ugc?igsh=Yzkwd3U3NmF6aXAw&utm_source=qr" },
-          { label: "TikTok", href: "https://www.tiktok.com/@leadsalpha.ugc?_t=ZM-8yeQiO5LGx6&_r=1" },
-          { label: "Facebook", href: "https://www.facebook.com/share/1FCLLAgsdv/?mibextid=wwXIfr" },
-          { label: "LinkedIn", href: "https://www.linkedin.com/company/leadsalpha" },
-          { label: "X", href: "https://x.com/leadsalpha_io?s=11&t=7v7jTjfx6LicKrQMe_SzSA" },
-          { label: "Snapchat", href: "https://t.snapchat.com/DN1BcUH5" },
-          // { label: "Masterclass", href: "/masterclass" },
+          { label: "Instagram", href: "https://www.instagram.com/" },
+          { label: "TikTok", href: "https://www.tiktok.com/" },
+          { label: "Facebook", href: "https://www.facebook.com/" },
+          { label: "LinkedIn", href: "https://www.linkedin.com/" },
+          { label: "X", href: "https://x.com/" },
+          { label: "Snapchat", href: "https://www.snapchat.com/" },
         ],
       },
     ],
@@ -53,7 +61,6 @@ const footerColumns = [
           { label: "Refund Policy", to: "/refund-policy" },
           { label: "Privacy Policy", to: "/privacy-policy" },
           { label: "Careers", to: "/careers" },
-          // { label: "Credit Expiration Policy", to: "/credit-expiration-policy" },
           { label: "T&Cs - Creators", to: "/terms-creators" },
           { label: "T&Cs - Brands", to: "/terms-brands" },
         ],
@@ -64,7 +71,10 @@ const footerColumns = [
     groups: [
       {
         title: "FAQs",
-        items: ["FAQ's Brands", "FAQ's Creators"],
+        items: [
+          { label: "FAQ's Brands", to: "/faqs-brands" },
+          { label: "FAQ's Creators", to: "/faqs-creators" },
+        ],
       },
     ],
   },
@@ -82,13 +92,6 @@ const Footer = () => {
                 <h4 className="text-[#6A6A70] text-xs mb-3">{section.title}</h4>
                 <ul className="space-y-2 text-xs">
                   {section.items.map((item, i) => {
-                    if (typeof item === "string") {
-                      return (
-                        <li key={i} className="hover:underline cursor-pointer">
-                          {item}
-                        </li>
-                      );
-                    }
                     if (item.to) {
                       return (
                         <li key={i}>
